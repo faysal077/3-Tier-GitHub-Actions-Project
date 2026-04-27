@@ -1,0 +1,25 @@
+name: Node.js CI
+on:
+push:
+branches: [ main
+pull_request:
+branches: [ main]
+jobs:
+compile:
+runs-on: Agent-1
+steps:
+name:
+Checkout code
+uses:
+actions/checkout@v4
+name:
+Set up Node.js
+uses:
+actions/setup-node@v4
+with:
+node-version: '23'
+adjust version as per your Jenkins setup
+name:
+Frontend Compilation (Syntax Check)
+run: |
+ed client
